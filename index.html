@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Rapat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #acd4ef;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #e6e9f0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, p, .attend-button {
+            text-align: center;
+        }
+        .meeting-details {
+            margin-top: 20px;
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .meeting-details li {
+            margin-bottom: 10px;
+        }
+        .meeting-details strong {
+            font-weight: bold;
+        }
+        .meeting-image {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .meeting-image img {
+            max-width: 120px;
+            height: auto;
+        }
+        .attend-button {
+            margin-top: 20px;
+        }
+        .attend-button button {
+            padding: 10px 20px;
+            background-color: #e4ebf3;
+            color: #489bc8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .attend-button button:hover {
+            background-color: #1a55d2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RAPAT BESAR TEAM KUCING GALAK</h1> 
+        <div class="meeting-image">
+            <img src="png-transparent-cat-cartoon-ginger-mammal-animals-cat-like-mammal.png" alt="Gambar Rapat">
+        </div>
+        <div class="meeting-details">
+            <h2>Surat Undangan ini disepakati pada:</h2>  
+            <p id="hasil"></p>
+            <h3>Untuk Rapat kita laksanakan pada :</h3>
+            <ul>
+                <li><strong>Tanggal:</strong> 25 Maret 2024</li>
+                <li><strong>Waktu:</strong> 09:00 - 11:00 WIB</li>
+                <li><strong>Jam:</strong> 08:30 WIB (Registrasi)</li>
+                <li><strong>Lokasi:</strong> Basecamp kita</li>
+                <li><strong>Agenda:</strong> Diskusi kemajuan team</li>
+            </ul>
+        </div>
+        <p>Jangan lupa datang agar kita bisa sharing pikiran Dan Jika anda Bisa datang langsung klik button dibawah ini.</p>
+        <div class="attend-button">
+            <button onclick="myFunction()">Kesanggupan Hadir</button>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            alert("Saya Hadir kak");
+        }
+        let tanggal = new Date();
+        document.getElementById("hasil").innerHTML = "Tanggal: " + tanggal.getDate() + " " + getBulan(tanggal.getMonth()) + " " + tanggal.getFullYear();
+        
+        function getBulan(bulan) {
+            const namaBulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+            return namaBulan[bulan];
+        }
+    </script>
+</body>
+</html>
